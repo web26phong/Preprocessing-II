@@ -167,23 +167,29 @@ img {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
 }
 .navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1% 0;
-  border-bottom: dashed 2px gray;
+  padding: 1% 4%;
+  border-bottom: 2px dashed silver;
+  max-width: 50%;
 }
 .navigation .title {
   width: 50%;
 }
 .navigation .navContainer {
-  width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 1.6rem;
+  width: 50%;
 }
 .navigation .navContainer a:link,
 .navigation .navContainer a:active,
@@ -193,15 +199,23 @@ img {
   color: black;
 }
 .footer {
-  width: 100%;
+  max-width: 50%;
   border-top: 2px dashed silver;
   background: #FFEBCD;
+  display: flex;
+  justify-content: center;
 }
 .footer p {
   text-align: center;
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+}
+.home .header {
+  border-bottom: 2px dashed silver;
+}
+.home .header .headerText {
+  padding: 2% 0;
 }
 .home .content-section {
   margin: 30px 0;
@@ -248,4 +262,20 @@ img {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+.home .content-pick .destination .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  color: white;
+  background-color: teal;
+  border-radius: 12px;
+  border: solid 1px teal;
+  font-size: 2rem;
+  padding: 4% 0;
+}
+.home .content-pick .destination .btn:hover {
+  color: teal;
+  background-color: white;
 }
