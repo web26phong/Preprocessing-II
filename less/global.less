@@ -16,6 +16,9 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 4rem;
+  @media @phone {
+    text-align: center;
+  }
 }
 
 h2 {
@@ -49,6 +52,11 @@ img {
   justify-content: center;
   align-content: center;
   justify-items: center;
+
+  @media @phone {
+    max-width: 500px;
+    width: 100%;
+  }
 }
 
 .bordertest(){
