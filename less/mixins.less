@@ -1,1 +1,24 @@
 // Mixins in here
+
+.pad(){
+    padding: 2% 0;
+}
+
+.borderbottom(){
+    border-bottom: 2px dashed silver;
+}
+
+.buttonStyle(@text:white, @bgColor:teal){
+    width: 85%;
+    color: @text;
+    background-color: @bgColor;
+    border-radius: 12px;
+    border: solid 1px @bgColor;
+    font-size: 2rem;
+    padding: 4% 0;
+
+    &:hover{
+        color: @bgColor;
+        background-color: @text;
+    }
+}

@@ -1,16 +1,25 @@
 .home {
+  .header{
+    .borderbottom();
+    .headerText{
+      .pad();
+    }
+  }
+
+  padding: 0 2%;
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
    
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @phone {
+        width: 98%;
+      }
     }
 
     .img-content {
@@ -19,7 +28,19 @@
 
       img {
         border-radius: 10px;
+        @media @phone {
+          width: 100%;
+        }
+
       }
+      @media @phone {
+        width: 98%;
+        padding: 1%;
+      }
+    }
+
+    @media @phone {
+      flex-flow: column nowrap;
     }
   }
 
@@ -36,6 +57,10 @@
       padding-right: 1%;
       padding-left: 0;
     }
+
+    @media @phone {
+      flex-flow: column-reverse nowrap;
+    }
   }
 
   .content-destination {
@@ -44,6 +69,9 @@
 
     img {
       border-radius: 10px;
+    }
+    @media @phone {
+      width: 100%;
     }
   }
 
@@ -56,6 +84,28 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .buttonStyle();
+        @media @phone {
+          .buttonStyle(white, @eastern-blue);
+        }
+      }
+      @media @phone {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    @media @phone {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
   }
 }// home
